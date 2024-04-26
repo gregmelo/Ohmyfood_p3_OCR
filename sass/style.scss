@@ -1,5 +1,6 @@
 @import "libs/reset.scss";
 @import "libs/variable.scss";
+@import "libs/mixins.scss";
 
 body {
   font-family: $font-family, sans-serif;
@@ -10,16 +11,12 @@ body {
   display: flex;
   flex-direction: column;
   &__logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexcenter;
     height: 3.938em;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
   }
   &__location {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexcenter;
     flex-direction: row;
     gap: 1.0625rem;
     width: 100%;
