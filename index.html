@@ -13,8 +13,9 @@
   <body>
     <header class="header">
       <div class="header__logo">
+        <a href="#">
         <img src="./assets/images/logo/ohmyfood@2x.svg" alt="" />
-      </div>
+      </div></a>
       <div class="header__location">
         <i class="fa-solid fa-location-dot"></i>
         <p>Paris, Belleville</p>
@@ -22,24 +23,34 @@
     </header>
     <main>
       <section class="info">
-        <h2 class="info__title">Réservez le menu qui vous convient</h2>
+        <h1 class="info__title">Réservez le menu qui vous convient</h1>
         <p class="info__subtitle">
           Découvrez des restaurants d'exception, sélectionnés par nos soins.
         </p>
-        <button class="info__button">Explorer nos restaurants</button>
+        <a href="#restaurants">
+        <button class="btn">Explorer nos restaurants</button></a>
       </section>
-      <section class="fonctionnement">
-        <h2>Fonctionnement</h2>
-        <ol>
-          <li>
-            <i class="fa-solid fa-mobile-screen-button"></i>Choississez un
-            restaurant
-          </li>
-          <li><i class="fa-solid fa-list-ul"></i>Composez votre menu</li>
-          <li><i class="fa-solid fa-store"></i>Dégustez au restaurant</li>
-        </ol>
+      <section class="process">
+        <h2 class="process__title">Fonctionnement</h2>
+        <div class="process__steps">
+          <div class="process__stage">
+              <span class="process__number">1</span>
+              <i class="fa-solid fa-mobile-screen-button"></i>
+              <span>Choisissez un restaurant</span> 
+          </div>
+          <div class="process__stage">
+              <span class="process__number">2</span>
+              <i class="fa-solid fa-list-ul"></i>
+              <span>Composez votre menu</span> 
+          </div>
+          <div class="process__stage">
+              <span class="process__number">3</span>
+              <i class="fa-solid fa-store"></i>
+              <span>Dégustez au restaurant</span> 
+          </div>
+      </div>
       </section>
-      <section class="restaurants">
+      <section class="restaurants" id="restaurants">
         <h2>Restaurants</h2>
         <div class="restaurant__cards">
           <a href="#" class="card">
