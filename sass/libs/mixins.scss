@@ -10,3 +10,8 @@
   justify-content: center;
   flex-direction: column;
 }
+
+@mixin flexcolumn {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap");
 @import "libs/reset.scss";
 @import "libs/variable.scss";
 @import "libs/mixins.scss";
@@ -8,20 +8,30 @@ body {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: $font-size-title;
+  font-weight: $font-weight-bold;
+}
+/*Header et location*/
 .header {
-  height: 7.063rem;
+  height: 113px;
   display: flex;
   flex-direction: column;
   &__logo {
     @include flexcenter;
-    height: 3.938em;
+    padding: 20px 0 15px 0;
+    height: 63px;
     box-shadow: 0 2px 4px 0 $shadow15;
     z-index: 10;
   }
   &__location {
     @include flexcenter;
-    gap: 1.0625rem;
-    height: 3.125em;
+    gap: 17px;
+    height: 50px;
     font-size: $font-size-text;
     font-weight: 500;
     background-color: #eaeaea;
@@ -31,28 +41,29 @@ body {
 }
 
 main {
-  background-color: #f6f6f6;
+  background-color: $background-color;
 }
 
+/*Information*/
 .info {
   text-align: center;
   &__title {
     font-size: $font-size-title;
     font-weight: $font-weight-bold;
-    padding-top: 39px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 39px 42px 0 58px;
+    text-align: center;
   }
   &__subtitle {
     margin: 1rem 0;
     font-size: $font-size-subtitle;
     font-weight: $font-weight-light;
+    padding-bottom: 27px;
   }
 }
 
 .btn {
-  width: 13.625rem;
-  height: 3.125rem;
+  width: 217px;
+  height: 50px;
   border-radius: 25px;
   background: linear-gradient(180deg, $secondary-color, $primary-color);
   color: white;
@@ -61,37 +72,257 @@ main {
   font-size: $font-size-text;
   font-family: $font-family;
   font-weight: $font-weight-medium;
-  margin: 27px 0 57px 0;
-  transition-duration: 0.3s;
+  margin-bottom: 57px;
+  transition-duration: 0.5s;
   &:hover {
     opacity: 85%;
     box-shadow: 0 4px 15px 0 $shadow35;
-    transition-duration: 0.3s;
+    transition-duration: 0.5s;
   }
 }
 
-.process {
+/*Fonctionnement*/
+.process__container {
   background-color: white;
-  padding: 48px 20px 68px 20px;
+  padding: 48px 30px 68px 20px;
+}
+.process {
   &__title {
-    font-size: $font-size-title;
-    font-weight: $font-weight-bold;
+    padding-bottom: 26px;
   }
   &__steps {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5625rem;
+    @include flexcolumn;
+    justify-content: space-between;
+    gap: 25px;
     & i {
       color: $icon-color;
+      font-size: 20px;
+      margin-right: 25px;
     }
   }
   &__stage {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
+    padding: 24px 0px 24px 25px;
     box-shadow: 0 4px 15px 0 $shadow15;
-    border-radius: 1.25rem;
-    height: 4.5237rem;
-    gap: 1.25rem;
+    border-radius: 20px;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-text;
+    background-color: $background-color;
+  }
+  &__number {
+    @include flexcenter;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: white;
+    background-color: $primary-color;
+    position: absolute;
+    transform: translateX(-35px);
+  }
+  &__ico--color i {
+    color: $primary-color;
+  }
+}
+
+/*Restaurants*/
+.restaurants {
+  background-color: $background-color;
+  padding: 54px 18px 66px 17px;
+  &__title {
+    padding-left: 2px;
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding-top: 24px;
+    gap: 18px;
+  }
+}
+
+/* card des différents restaurants*/
+.card {
+  background-color: white;
+  color: black;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px $shadow10;
+  text-decoration: none;
+  height: 251px;
+  position: relative;
+  overflow: hidden;
+  &__image {
+    img {
+      display: flex;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+      width: 100%;
+      height: 231px;
+      position: relative;
+      top: -57px;
+    }
+  }
+  &__label {
+    @include flexcenter;
+    position: absolute;
+    background-color: $tertiary-color;
+    color: $label-color;
+    width: 80px;
+    height: 29px;
+    font-size: $font-size-label;
+    font-weight: $font-weight-medium;
+    box-shadow: 0 2px 4px 0 $shadow15;
+    border-radius: 2px;
+    top: 13px;
+    right: 10px;
+  }
+  &__content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 25px 0 13px;
+    top: -60px;
+  }
+  &__txt {
+    @include flexcolumn;
+    gap: 5px;
+  }
+  &__title {
+    font-size: $font-size-subtitle;
+    font-weight: $font-weight-bold;
+  }
+  &__subtitle {
+    font-size: 17px;
+    font-weight: $font-weight-light;
+  }
+  &__favorite {
+    & i {
+      position: absolute;
+      right: 25px;
+      bottom: 15px;
+      font-size: 22px;
+      color: #101010;
+    }
+    .fas {
+      opacity: 0;
+      &:hover {
+        opacity: 1;
+        color: transparent; /*Cela me permet de rendre la couleur noire du cœur transparente.*/
+        background-clip: text; /*Grâce à cette propriété, j'ai pu limiter l'affichage du dégradé au texte, dans ce cas-ci juste pour remplir le cœur.*/
+        background-image: linear-gradient(
+          193.33deg,
+          #9356dc -11.44%,
+          #ff79da 123.93%
+        );
+      }
+    }
+  }
+}
+
+/*FOOTER*/
+footer {
+  @include flexcolumn;
+  background-color: $footer-color;
+  padding: 22px 25px 22px 25px;
+  gap: 16px;
+  & .logo {
+    color: white;
+    font-family: $font-family2;
+    font-size: $font-size-subtitle;
+  }
+  & ul {
+    @include flexcolumn;
+    gap: 7px;
+    & li {
+      display: flex;
+      color: white;
+      gap: 11px;
+      & i {
+        position: relative;
+        width: 11px;
+        height: 13px;
+        top: 2px;
+      }
+      & a {
+        color: white;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-text;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .info {
+    &__title {
+      font-size: 30px;
+    }
+  }
+  /* passage de la section fonctionnement de la disposition en colonne à la disposition en ligne*/
+  .process__steps {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+  .process__stage {
+    width: 320px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /*Augmentation de la taille du titre de la section info.*/
+  .info {
+    &__title {
+      font-size: 40px;
+    }
+  }
+
+  /*Réduction de la marge sous le bouton de la section info.*/
+  .btn {
+    margin-bottom: 30px;
+  }
+
+  /*Ajout de marges pour la section fonctionnement ainsi que modification de l'espace entre les trois "stages".*/
+  .process {
+    &__container {
+      padding: 50px 180px;
+    }
+    &__steps {
+      gap: 50px;
+    }
+  }
+
+  /*Passage de la section restaurants sur deux colonnes et deux lignes + modification de l'espacement entre les cards.*/
+  .restaurants {
+    padding: 30px 180px;
+    &__cards {
+      grid-template: 1fr 1fr / 1fr 1fr; /* Avant le "/", cela correspond à "grid-template-rows" donc 2 lignes, et après le "/", cela correspond à "grid-template-columns" donc 2 colonnes.*/
+      gap: 50px 100px; /*La première valeur correspond au gap vertical et la seconde au gap horizontal.*/
+    }
+  }
+
+  /*Mise en place des éléments du footer en ligne. On applique un row-reverse afin d'inverser le logo avec la liste de liens.*/
+  footer {
+    flex-direction: row-reverse;
+    padding: 30px 25px;
+  }
+  footer .logo {
+    width: 139px;
+    padding-top: 27px;
+  }
+  footer ul {
+    width: 661px;
+    padding-top: 34px;
+    flex-direction: row;
+  }
+
+  /*On cible les deux premiers éléments li.*/
+  footer ul li:nth-child(-n + 2) {
+    width: 190px;
+  }
+  /*On cible les deux derniers éléments li.*/
+  footer ul li:nth-child(n + 3) {
+    width: 130px;
   }
 }
