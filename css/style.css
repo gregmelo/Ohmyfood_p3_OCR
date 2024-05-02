@@ -297,6 +297,21 @@ main {
   background-image: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
 }
 
+.favorite-checkbox {
+  display: none;
+}
+
+.favorite-checkbox:checked + label .far {
+  opacity: 0;
+}
+
+.favorite-checkbox:checked + label .fas {
+  opacity: 1;
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+}
+
 /*FOOTER*/
 footer {
   display: flex;
