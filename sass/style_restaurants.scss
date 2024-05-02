@@ -1,0 +1,114 @@
+@import "libs/reset.scss";
+@import "libs/variable.scss";
+@import "libs/mixins.scss";
+
+body {
+  font-family: $font-family, sans-serif;
+  width: 100%;
+}
+
+/*Header et location*/
+.header {
+  @include flexcenter;
+  height: 63px;
+  box-shadow: 0 2px 4px 0 $shadow15;
+  position: relative;
+  &__back {
+    position: absolute;
+    left: 0;
+    font-size: 30px;
+    padding: 17px 0 16px 17px;
+    color: black;
+  }
+  &__logo {
+    display: flex;
+  }
+}
+
+main {
+  background-color: $background-color;
+}
+
+.banner {
+  &__img {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+  }
+}
+
+/* card des différents restaurants*/
+.menu {
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  margin-top: -55px;
+  background-color: white;
+  z-index: 10;
+  height: 1000px;
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 31px 17px 42px 17px;
+  }
+  &__title {
+    font-size: $font-size-title-menu;
+    font-family: $font-family2;
+  }
+  &__favorite {
+    margin-top: -20px;
+    & i {
+      position: absolute;
+      right: 24px;
+      font-size: 22px;
+      color: #101010;
+    }
+    .fas {
+      opacity: 0;
+      &:hover {
+        opacity: 1;
+        color: transparent; /*Cela me permet de rendre la couleur noire du cœur transparente.*/
+        background-clip: text; /*Grâce à cette propriété, j'ai pu limiter l'affichage du dégradé au texte, dans ce cas-ci juste pour remplir le cœur.*/
+        background-image: linear-gradient(
+          193.33deg,
+          #9356dc -11.44%,
+          #ff79da 123.93%
+        );
+      }
+    }
+  }
+}
+
+/*FOOTER*/
+footer {
+  @include flexcolumn;
+  background-color: $footer-color;
+  padding: 22px 25px 22px 25px;
+  gap: 16px;
+  & .logo {
+    color: white;
+    font-family: $font-family2;
+    font-size: $font-size-subtitle;
+  }
+  & ul {
+    @include flexcolumn;
+    gap: 7px;
+    & li {
+      display: flex;
+      color: white;
+      gap: 11px;
+      & i {
+        position: relative;
+        width: 11px;
+        height: 13px;
+        top: 2px;
+      }
+      & a {
+        color: white;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-text;
+      }
+    }
+  }
+}

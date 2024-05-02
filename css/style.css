@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap");
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap");
 html,
 body,
 p,
@@ -78,13 +78,13 @@ th {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   width: 100%;
-}
-
-a {
-  text-decoration: none;
 }
 
 h2 {

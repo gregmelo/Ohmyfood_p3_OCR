@@ -1,0 +1,192 @@
+@charset "UTF-8";
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap");
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+}
+
+/*Header et location*/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 63px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+.header__back {
+  position: absolute;
+  left: 0;
+  font-size: 30px;
+  padding: 17px 0 16px 17px;
+  color: black;
+}
+.header__logo {
+  display: flex;
+}
+
+main {
+  background-color: #f6f6f6;
+}
+
+.banner__img {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+}
+
+/* card des différents restaurants*/
+.menu {
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  margin-top: -55px;
+  background-color: white;
+  z-index: 10;
+  height: 1000px;
+}
+.menu__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 31px 17px 42px 17px;
+}
+.menu__title {
+  font-size: 28px;
+  font-family: "Shrikhand";
+}
+.menu__favorite {
+  margin-top: -20px;
+}
+.menu__favorite i {
+  position: absolute;
+  right: 24px;
+  font-size: 22px;
+  color: #101010;
+}
+.menu__favorite .fas {
+  opacity: 0;
+}
+.menu__favorite .fas:hover {
+  opacity: 1;
+  color: transparent; /*Cela me permet de rendre la couleur noire du cœur transparente.*/
+  background-clip: text; /*Grâce à cette propriété, j'ai pu limiter l'affichage du dégradé au texte, dans ce cas-ci juste pour remplir le cœur.*/
+  background-image: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+}
+
+/*FOOTER*/
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  padding: 22px 25px 22px 25px;
+  gap: 16px;
+}
+footer .logo {
+  color: white;
+  font-family: "Shrikhand";
+  font-size: 18px;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+footer ul li {
+  display: flex;
+  color: white;
+  gap: 11px;
+}
+footer ul li i {
+  position: relative;
+  width: 11px;
+  height: 13px;
+  top: 2px;
+}
+footer ul li a {
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+}
