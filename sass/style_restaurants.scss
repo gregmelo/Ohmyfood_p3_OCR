@@ -7,7 +7,7 @@ body {
   width: 100%;
 }
 
-/*Header et location*/
+/*Header*/
 .header {
   @include flexcenter;
   height: 63px;
@@ -25,10 +25,12 @@ body {
   }
 }
 
+/*END OF HEADER*/
+/*MAIN*/
 main {
   background-color: $background-color;
 }
-
+/*BANNER*/
 .banner {
   &__img {
     width: 100%;
@@ -36,15 +38,15 @@ main {
     object-fit: cover;
   }
 }
-
-/* card des différents restaurants*/
+/*END OF BANNER*/
+/*MENU*/
 .menu {
   border-radius: 40px 40px 0 0;
   position: relative;
   margin-top: -55px;
-  background-color: white;
+  background-color: $background-color;
   z-index: 10;
-  height: 1000px;
+  /*MENU HEADER*/
   &__header {
     display: flex;
     flex-direction: row;
@@ -67,6 +69,7 @@ main {
     .fas {
       opacity: 0;
       &:hover {
+        /*pour avoir la couleur sur le cœur au passage de la souris ou du stylet.*/
         opacity: 1;
         color: transparent; /*Cela me permet de rendre la couleur noire du cœur transparente.*/
         background-clip: text; /*Grâce à cette propriété, j'ai pu limiter l'affichage du dégradé au texte, dans ce cas-ci juste pour remplir le cœur.*/
@@ -80,6 +83,7 @@ main {
   }
 }
 
+/*Permet de gérer la checkbox et le changement de couleur du cœur lorsque celle-ci est cochée.*/
 .favorite-checkbox {
   display: none;
 }
@@ -98,7 +102,120 @@ main {
     #ff79da 123.93%
   );
 }
+/*END OF MENU HEADER*/
 
+/*MENU CATEGORIES*/
+
+.categories {
+  @include flexcolumn;
+  gap: 40px;
+}
+.category {
+  @include flexcolumn;
+  padding: 0 13px;
+  gap: 12px;
+  &__title {
+    font-size: $font-size-text;
+    font-weight: $font-weight-light;
+    text-transform: uppercase;
+    &__underline {
+      display: flex;
+      background-color: $tertiary-color;
+      color: $tertiary-color;
+      border: none;
+      height: 3px;
+      width: 40px;
+      margin-top: 5px;
+    }
+  }
+  &__card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 349px;
+    height: 69px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 4px 15px 0 $shadow10;
+    padding: 13.5px 15px;
+    gap: 5px;
+    cursor: pointer;
+    &__titles {
+      @include flexcolumn;
+      gap: 5px;
+      overflow: hidden; /*Pour couper le texte qui dépasse.*/
+    }
+    &__title {
+      font-weight: $font-weight-medium;
+      font-size: $font-size-subtitle;
+    }
+
+    &__subtitle {
+      font-weight: $font-weight-light;
+      font-size: $font-size-subtitle-menu;
+    }
+
+    &__toggle:checked ~ & &__title,
+    &__toggle:checked ~ & &__subtitle,
+    &:hover &__title,
+    &:hover &__subtitle {
+      overflow: hidden; /*Pour couper le texte qui dépasse.*/
+      text-overflow: ellipsis; /*Pour afficher les "...".*/
+      white-space: nowrap; /*Pour la gestion des espaces*/
+      max-width: 85%; /*Ajoutez une largeur maximale.*/
+    }
+
+    &__price {
+      position: absolute;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-subtitle-menu;
+      color: $footer-color;
+      right: 15px;
+      padding-top: 24px;
+      transition-duration: 0.3s;
+    }
+    &__check {
+      @include flexcenter;
+      position: absolute;
+      border-radius: 0 15px 15px 0;
+      right: -200px;
+      background-color: $tertiary-color;
+      width: 59px;
+      height: 69px;
+      transition-duration: 0.3s;
+    }
+    &__check i {
+      font-size: 20px;
+      height: 20px;
+      color: $tertiary-color;
+      background-color: white;
+      border-radius: 50%;
+      border: none;
+    }
+    &__toggle {
+      display: none;
+    }
+    /* Lorsque la checkbox est cochée, le prix ce décale sur la gauche et le check apparait, avec le "~" je sélectionne tous les éléments .category__card qui suivent l’élément .category__card__toggle, pas seulement le premier.*/
+    &__toggle:checked ~ & &__price {
+      position: absolute;
+      right: 65px;
+    }
+    &__toggle:checked ~ & &__check {
+      position: absolute;
+      right: 0;
+    }
+
+    &:hover &__price {
+      position: absolute;
+      right: 65px;
+    }
+    &:hover &__check {
+      position: absolute;
+      right: 0;
+    }
+  }
+}
 /*FOOTER*/
 footer {
   @include flexcolumn;
@@ -131,3 +248,4 @@ footer {
     }
   }
 }
+/*END OF FOOTER*/

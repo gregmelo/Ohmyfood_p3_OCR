@@ -202,6 +202,7 @@ main {
     .fas {
       opacity: 0;
       &:hover {
+        /*pour avoir la couleur sur le cœur au passage de la souris ou du stylet.*/
         opacity: 1;
         color: transparent; /*Cela me permet de rendre la couleur noire du cœur transparente.*/
         background-clip: text; /*Grâce à cette propriété, j'ai pu limiter l'affichage du dégradé au texte, dans ce cas-ci juste pour remplir le cœur.*/
@@ -215,23 +216,27 @@ main {
   }
 }
 
+/*Permet de gérer la checkbox et le changement de couleur du cœur lorsque celle-ci est cochée.*/
+/* Permet de cacher la checkbox */
 .favorite-checkbox {
   display: none;
 }
 
+/* Lorsque la checkbox est cochée, masque l'icône de cœur vide (far) et affiche l'icône de cœur plein (fas), avec le "+" je sélectionne l'élément adjacent */
 .favorite-checkbox:checked + label .far {
   opacity: 0;
 }
 
+/* Lorsque la checkbox est cochée, affiche l'icône de cœur plein avec une couleur dégradée en arrière-plan */
 .favorite-checkbox:checked + label .fas {
   opacity: 1;
-  color: transparent;
-  background-clip: text;
+  color: transparent; /* Rend la couleur de l'icône transparente */
+  background-clip: text; /* Applique le dégradé de couleur au texte */
   background-image: linear-gradient(
     193.33deg,
     #9356dc -11.44%,
     #ff79da 123.93%
-  );
+  ); /* Dégradé de couleur utilisé comme arrière-plan */
 }
 
 /*FOOTER*/

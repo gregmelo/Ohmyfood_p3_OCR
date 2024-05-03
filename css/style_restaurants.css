@@ -87,7 +87,7 @@ body {
   width: 100%;
 }
 
-/*Header et location*/
+/*Header*/
 .header {
   display: flex;
   align-items: center;
@@ -107,24 +107,28 @@ body {
   display: flex;
 }
 
+/*END OF HEADER*/
+/*MAIN*/
 main {
   background-color: #f6f6f6;
 }
 
+/*BANNER*/
 .banner__img {
   width: 100%;
   height: 275px;
   object-fit: cover;
 }
 
-/* card des différents restaurants*/
+/*END OF BANNER*/
+/*MENU*/
 .menu {
   border-radius: 40px 40px 0 0;
   position: relative;
   margin-top: -55px;
-  background-color: white;
+  background-color: #f6f6f6;
   z-index: 10;
-  height: 1000px;
+  /*MENU HEADER*/
 }
 .menu__header {
   display: flex;
@@ -150,12 +154,14 @@ main {
   opacity: 0;
 }
 .menu__favorite .fas:hover {
+  /*pour avoir la couleur sur le cœur au passage de la souris ou du stylet.*/
   opacity: 1;
   color: transparent; /*Cela me permet de rendre la couleur noire du cœur transparente.*/
   background-clip: text; /*Grâce à cette propriété, j'ai pu limiter l'affichage du dégradé au texte, dans ce cas-ci juste pour remplir le cœur.*/
   background-image: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
 }
 
+/*Permet de gérer la checkbox et le changement de couleur du cœur lorsque celle-ci est cochée.*/
 .favorite-checkbox {
   display: none;
 }
@@ -169,6 +175,118 @@ main {
   color: transparent;
   background-clip: text;
   background-image: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+}
+
+/*END OF MENU HEADER*/
+/*MENU CATEGORIES*/
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  padding: 0 13px;
+  gap: 12px;
+}
+.category__title {
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.category__title__underline {
+  display: flex;
+  background-color: #99e2d0;
+  color: #99e2d0;
+  border: none;
+  height: 3px;
+  width: 40px;
+  margin-top: 5px;
+}
+.category__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 349px;
+  height: 69px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+  padding: 13.5px 15px;
+  gap: 5px;
+  cursor: pointer;
+  /* Lorsque la checkbox est cochée, le prix ce décale sur la gauche et le check apparait, avec le "~" je sélectionne tous les éléments .category__card qui suivent l’élément .category__card__toggle, pas seulement le premier.*/
+}
+.category__card__titles {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow: hidden; /*Pour couper le texte qui dépasse.*/
+}
+.category__card__title {
+  font-weight: 500;
+  font-size: 18px;
+}
+.category__card__subtitle {
+  font-weight: 300;
+  font-size: 15px;
+}
+.category__card__toggle:checked ~ .category__card .category__card__title, .category__card__toggle:checked ~ .category__card .category__card__subtitle, .category__card:hover .category__card__title, .category__card:hover .category__card__subtitle {
+  overflow: hidden; /*Pour couper le texte qui dépasse.*/
+  text-overflow: ellipsis; /*Pour afficher les "...".*/
+  white-space: nowrap; /*Pour la gestion des espaces*/
+  max-width: 85%; /*Ajoutez une largeur maximale.*/
+}
+.category__card__price {
+  position: absolute;
+  font-weight: 700;
+  font-size: 15px;
+  color: #353535;
+  right: 15px;
+  padding-top: 24px;
+  transition-duration: 0.3s;
+}
+.category__card__check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border-radius: 0 15px 15px 0;
+  right: -200px;
+  background-color: #99e2d0;
+  width: 59px;
+  height: 69px;
+  transition-duration: 0.3s;
+}
+.category__card__check i {
+  font-size: 20px;
+  height: 20px;
+  color: #99e2d0;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+}
+.category__card__toggle {
+  display: none;
+}
+.category__card__toggle:checked ~ .category__card .category__card__price {
+  position: absolute;
+  right: 65px;
+}
+.category__card__toggle:checked ~ .category__card .category__card__check {
+  position: absolute;
+  right: 0;
+}
+.category__card:hover .category__card__price {
+  position: absolute;
+  right: 65px;
+}
+.category__card:hover .category__card__check {
+  position: absolute;
+  right: 0;
 }
 
 /*FOOTER*/
@@ -205,3 +323,5 @@ footer ul li a {
   font-weight: 500;
   font-size: 16px;
 }
+
+/*END OF FOOTER*/
