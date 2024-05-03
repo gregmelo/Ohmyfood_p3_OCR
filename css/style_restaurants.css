@@ -109,7 +109,7 @@ body {
 /*END OF HEADER*/
 /*MAIN*/
 main {
-  background-color: #f6f6f6;
+  background-color: white;
 }
 
 /*BANNER*/
@@ -263,8 +263,8 @@ main {
 .category__card__check i {
   font-size: 20px;
   height: 20px;
-  color: #99e2d0;
-  background-color: white;
+  color: white;
+  background-color: transparent;
   border-radius: 50%;
   border: none;
 }
@@ -289,6 +289,7 @@ main {
 }
 
 /*END OF MENU CATEGORIES*/
+/*BUTTON COMMAND*/
 .btn {
   display: flex;
   align-items: center;
@@ -315,6 +316,7 @@ main {
   transition-duration: 0.5s;
 }
 
+/*END OF BUTTON COMMAND*/
 /*FOOTER*/
 footer {
   display: flex;
@@ -351,3 +353,59 @@ footer ul li a {
 }
 
 /*END OF FOOTER*/
+/*MEDIA QUERY*/
+/* Media query for screens with a minimum width of 768px */
+@media (min-width: 768px) {
+  /*j'utilise l'attribut initial pour réinitialiser les propriétés à leurs valeur par défaut*/
+  .category__card__toggle:checked ~ .category__card .category__card__title,
+  .category__card__toggle:checked ~ .category__card .category__card__subtitle,
+  .category__card:hover .category__card__title,
+  .category__card:hover .category__card__subtitle {
+    display: initial;
+    overflow: initial;
+    text-overflow: initial;
+    white-space: initial;
+    max-width: initial;
+  }
+}
+/* Media query for screens with a minimum width of 1024px */
+@media (min-width: 1024px) {
+  .menu {
+    margin: -30px 150px 0 150px;
+  }
+  /*BANNER*/
+  .banner__img {
+    height: 383px;
+  }
+  /*Mise en place des éléments du footer en ligne. On applique un row-reverse afin d'inverser le logo avec la liste de liens.*/
+  footer {
+    flex-direction: row-reverse;
+    padding: 30px 25px;
+  }
+  footer .logo {
+    width: 139px;
+    padding-top: 27px;
+  }
+  footer ul {
+    width: 661px;
+    padding-top: 34px;
+    flex-direction: row;
+  }
+  /*On cible les deux premiers éléments li.*/
+  footer ul li:nth-child(-n+2) {
+    width: 190px;
+  }
+  /*On cible les deux derniers éléments li.*/
+  footer ul li:nth-child(n+3) {
+    width: 130px;
+  }
+}
+/* Media query for screens with a minimum width of 1440px */
+@media (min-width: 1440px) {
+  /*Ajout de marges sur la gauche et la droite lorsque la taille de l'écran est supérieure à 1440px.*/
+  body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+  }
+}
