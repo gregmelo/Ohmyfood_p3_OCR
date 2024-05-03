@@ -84,7 +84,6 @@ a {
 
 body {
   font-family: "Roboto", sans-serif;
-  width: 100%;
 }
 
 /*Header*/
@@ -183,6 +182,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  overflow: hidden;
 }
 
 .category {
@@ -210,7 +210,6 @@ main {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  width: 349px;
   height: 69px;
   border-radius: 15px;
   background-color: white;
@@ -224,7 +223,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  overflow: hidden; /*Pour couper le texte qui dépasse.*/
 }
 .category__card__title {
   font-weight: 500;
@@ -235,6 +233,7 @@ main {
   font-size: 15px;
 }
 .category__card__toggle:checked ~ .category__card .category__card__title, .category__card__toggle:checked ~ .category__card .category__card__subtitle, .category__card:hover .category__card__title, .category__card:hover .category__card__subtitle {
+  display: block;
   overflow: hidden; /*Pour couper le texte qui dépasse.*/
   text-overflow: ellipsis; /*Pour afficher les "...".*/
   white-space: nowrap; /*Pour la gestion des espaces*/
@@ -255,7 +254,7 @@ main {
   justify-content: center;
   position: absolute;
   border-radius: 0 15px 15px 0;
-  right: -200px;
+  right: -100px;
   background-color: #99e2d0;
   width: 59px;
   height: 69px;
@@ -287,6 +286,33 @@ main {
 .category__card:hover .category__card__check {
   position: absolute;
   right: 0;
+}
+
+/*END OF MENU CATEGORIES*/
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn__command {
+  width: 217px;
+  height: 50px;
+  margin: 40px 0;
+  border-radius: 25px;
+  background: linear-gradient(180deg, #ff79da, #9356dc);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  font-size: 16px;
+  font-family: "Roboto";
+  font-weight: 500;
+  margin-bottom: 57px;
+  transition-duration: 0.5s;
+}
+.btn__command:hover {
+  opacity: 85%;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.35);
+  transition-duration: 0.5s;
 }
 
 /*FOOTER*/

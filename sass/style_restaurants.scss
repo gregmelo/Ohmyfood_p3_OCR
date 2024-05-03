@@ -4,7 +4,6 @@
 
 body {
   font-family: $font-family, sans-serif;
-  width: 100%;
 }
 
 /*Header*/
@@ -109,6 +108,7 @@ main {
 .categories {
   @include flexcolumn;
   gap: 40px;
+  overflow: hidden;
 }
 .category {
   @include flexcolumn;
@@ -133,7 +133,6 @@ main {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    width: 349px;
     height: 69px;
     border-radius: 15px;
     background-color: white;
@@ -144,7 +143,6 @@ main {
     &__titles {
       @include flexcolumn;
       gap: 5px;
-      overflow: hidden; /*Pour couper le texte qui dépasse.*/
     }
     &__title {
       font-weight: $font-weight-medium;
@@ -160,12 +158,12 @@ main {
     &__toggle:checked ~ & &__subtitle,
     &:hover &__title,
     &:hover &__subtitle {
+      display: block;
       overflow: hidden; /*Pour couper le texte qui dépasse.*/
       text-overflow: ellipsis; /*Pour afficher les "...".*/
       white-space: nowrap; /*Pour la gestion des espaces*/
       max-width: 85%; /*Ajoutez une largeur maximale.*/
     }
-
     &__price {
       position: absolute;
       font-weight: $font-weight-bold;
@@ -179,7 +177,7 @@ main {
       @include flexcenter;
       position: absolute;
       border-radius: 0 15px 15px 0;
-      right: -200px;
+      right: -100px;
       background-color: $tertiary-color;
       width: 59px;
       height: 69px;
@@ -216,6 +214,31 @@ main {
     }
   }
 }
+/*END OF MENU CATEGORIES*/
+.btn {
+  @include flexcenter;
+  &__command {
+    width: 217px;
+    height: 50px;
+    margin: 40px 0;
+    border-radius: 25px;
+    background: linear-gradient(180deg, $secondary-color, $primary-color);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 10px 0 $shadow25;
+    font-size: $font-size-text;
+    font-family: $font-family;
+    font-weight: $font-weight-medium;
+    margin-bottom: 57px;
+    transition-duration: 0.5s;
+    &:hover {
+      opacity: 85%;
+      box-shadow: 0 4px 15px 0 $shadow35;
+      transition-duration: 0.5s;
+    }
+  }
+}
+
 /*FOOTER*/
 footer {
   @include flexcolumn;
