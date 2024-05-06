@@ -2,6 +2,14 @@
 @import "libs/variable.scss";
 @import "libs/mixins.scss";
 
+@keyframes onset_time {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 body {
   font-family: $font-family, sans-serif;
 }
@@ -114,6 +122,7 @@ main {
   @include flexcolumn;
   padding: 0 13px;
   gap: 12px;
+  opacity: 0;
   &__title {
     font-size: $font-size-text;
     font-weight: $font-weight-light;
@@ -185,9 +194,9 @@ main {
     }
     &__check i {
       font-size: 20px;
-      height: 20px;
-      color: white;
-      background-color: transparent;
+      // height: 20px;
+      color: $tertiary-color;
+      background-color: white;
       border-radius: 50%;
       border: none;
     }
@@ -214,11 +223,36 @@ main {
     }
   }
 }
+
+/*.anim1 {
+  animation: onset_time 1s forwards;
+}
+
+.anim2 {
+  animation: onset_time 1s 0.5s forwards;
+}
+
+.anim3 {
+  animation: onset_time 1s 1s forwards;
+}*/
+
+// On utilise une boucle "@for" pour itérer de 1 à 3 (les 3 .anim du dessus).
+// On génère les règles CSS ".anim#{$i}", où "$i" prend les valeurs 1 puis 2 puis enfin 3.
+// Ensuite on utilise "#{0.5s * ($i - 1)}" pour calculer le délai de l'animation qui augmente de 0.5s à chaque itération.
+
+@for $i from 1 through 4 {
+  .anim#{$i} {
+    animation: onset_time 1s #{0.5s * ($i - 1)} forwards;
+  }
+}
+
 /*END OF MENU CATEGORIES*/
 /*BUTTON COMMAND*/
 .btn {
   @include flexcenter;
+  opacity: 0;
   &__command {
+    @include flexcenter;
     width: 217px;
     height: 50px;
     margin: 40px 0;

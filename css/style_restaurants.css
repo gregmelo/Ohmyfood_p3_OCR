@@ -82,6 +82,14 @@ a {
   text-decoration: none;
 }
 
+@keyframes onset_time {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -190,6 +198,7 @@ main {
   flex-direction: column;
   padding: 0 13px;
   gap: 12px;
+  opacity: 0;
 }
 .category__title {
   font-size: 16px;
@@ -262,9 +271,8 @@ main {
 }
 .category__card__check i {
   font-size: 20px;
-  height: 20px;
-  color: white;
-  background-color: transparent;
+  color: #99e2d0;
+  background-color: white;
   border-radius: 50%;
   border: none;
 }
@@ -288,14 +296,45 @@ main {
   right: 0;
 }
 
+/*.anim1 {
+  animation: onset_time 1s forwards;
+}
+
+.anim2 {
+  animation: onset_time 1s 0.5s forwards;
+}
+
+.anim3 {
+  animation: onset_time 1s 1s forwards;
+}*/
+.anim1 {
+  animation: onset_time 1s 0s forwards;
+}
+
+.anim2 {
+  animation: onset_time 1s 0.5s forwards;
+}
+
+.anim3 {
+  animation: onset_time 1s 1s forwards;
+}
+
+.anim4 {
+  animation: onset_time 1s 1.5s forwards;
+}
+
 /*END OF MENU CATEGORIES*/
 /*BUTTON COMMAND*/
 .btn {
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
 }
 .btn__command {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 217px;
   height: 50px;
   margin: 40px 0;
