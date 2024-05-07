@@ -162,6 +162,9 @@ main {
     /*On augmente la taille de la carte du restaurant de 1 % lorsque la souris passe dessus.*/
     transform: scale(1.01);
   }
+  & a {
+    color: black;
+  }
   &__image {
     img {
       display: flex;
