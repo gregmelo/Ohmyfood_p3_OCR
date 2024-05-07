@@ -31,9 +31,7 @@
         <p class="info__subtitle">
           Découvrez des restaurants d'exception, sélectionnés par nos soins.
         </p>
-        <a href="#restaurants">
-          <button class="btn">Explorer nos restaurants</button></a
-        >
+        <a href="#restaurants" class="btn"> Explorer nos restaurants</a>
       </section>
       <section class="process">
         <div class="process__container">
@@ -60,8 +58,8 @@
       <section class="restaurants" id="restaurants">
         <h2 class="restaurants__title">Restaurants</h2>
         <div class="restaurants__cards">
-          <a href="./restaurants/la_palette_du_gout.html" class="card">
-            <article class="card__image">
+          <article class="card">
+            <a href="./restaurants/la_palette_du_gout.html" class="card__image">
               <img
                 src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                 alt="Image d'un plat du restaurant la palette du goût"
@@ -72,42 +70,40 @@
                   <h3 class="card__title">La palette du goût</h3>
                   <p class="card__subtitle">Ménilmontant</p>
                 </div>
-                <div class="card__favorite">
-                  <input type="checkbox" id="like1" class="favorite-checkbox" />
-                  <label for="like1">
-                    <i class="far fa-heart"></i>
-                    <i class="fas fa-heart"></i>
-                  </label>
-                </div>
               </div>
-            </article>
-          </a>
-          <a href="./restaurants/la_note_enchantee.html" class="card">
-            <article class="card__image">
-              <div>
-                <img
-                  src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-                  alt="Image d'un plat du restaurant la note enchantée"
-                />
-                <span class="card__label">Nouveau</span>
-              </div>
+            </a>
+            <div class="card__favorite favorite">
+              <label for="like1">
+                <input type="checkbox" id="like1" class="favorite-checkbox" />
+                <i class="far fa-heart heart-icon favorite-notliked"></i>
+                <i class="fas fa-heart heart-icon favorite-liked"></i>
+              </label>
+            </div>
+          </article>
+          <article class="card">
+            <a href="./restaurants/la_note_enchantee.html" class="card__image">
+              <img
+                src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                alt="Image d'un plat du restaurant la note enchantée"
+              />
+              <span class="card__label">Nouveau</span>
               <div class="card__content">
                 <div class="card__txt">
                   <h3 class="card__title">La note enchantée</h3>
                   <p class="card__subtitle">Charonne</p>
                 </div>
-                <div class="card__favorite">
-                  <input type="checkbox" id="like2" class="favorite-checkbox" />
-                  <label for="like2">
-                    <i class="far fa-heart"></i>
-                    <i class="fas fa-heart"></i>
-                  </label>
-                </div>
               </div>
-            </article>
-          </a>
-          <a href="./restaurants/a-la-francaise.html" class="card">
-            <article class="card__image">
+            </a>
+            <div class="card__favorite favorite">
+              <label for="like2">
+                <input type="checkbox" id="like2" class="favorite-checkbox" />
+                <i class="far fa-heart favorite-notliked"></i>
+                <i class="fas fa-heart favorite-liked"></i>
+              </label>
+            </div>
+          </article>
+          <article class="card">
+            <a href="./restaurants/a-la-francaise.html" class="card__image">
               <img
                 src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                 alt="Image d'un plat du restaurant à la française"
@@ -117,18 +113,18 @@
                   <h3 class="card__title">À la française</h3>
                   <p class="card__subtitle">Cité Rouge</p>
                 </div>
-                <div class="card__favorite">
-                  <input type="checkbox" id="like3" class="favorite-checkbox" />
-                  <label for="like3">
-                    <i class="far fa-heart"></i>
-                    <i class="fas fa-heart"></i>
-                  </label>
-                </div>
               </div>
-            </article>
-          </a>
-          <a href="./restaurants/le_delice_des_sens.html" class="card">
-            <article class="card__image">
+            </a>
+            <div class="card__favorite favorite">
+              <label for="like3">
+                <input type="checkbox" id="like3" class="favorite-checkbox" />
+                <i class="far fa-heart favorite-notliked"></i>
+                <i class="fas fa-heart favorite-liked"></i>
+              </label>
+            </div>
+          </article>
+          <article class="card">
+            <a href="./restaurants/le_delice_des_sens.html" class="card__image">
               <img
                 src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                 alt="Image d'un plat du restaurant le délice des sens"
@@ -138,16 +134,16 @@
                   <h3 class="card__title">Le délice des sens</h3>
                   <p class="card__subtitle">Folie-Méricourt</p>
                 </div>
-                <div class="card__favorite">
-                  <input type="checkbox" id="like4" class="favorite-checkbox" />
-                  <label for="like4">
-                    <i class="far fa-heart"></i>
-                    <i class="fas fa-heart"></i>
-                  </label>
-                </div>
               </div>
-            </article>
-          </a>
+            </a>
+            <div class="card__favorite favorite">
+              <label for="like4">
+                <input type="checkbox" id="like4" class="favorite-checkbox" />
+                <i class="far fa-heart favorite-notliked"></i>
+                <i class="fas fa-heart favorite-liked"></i>
+              </label>
+            </div>
+          </article>
         </div>
       </section>
     </main>

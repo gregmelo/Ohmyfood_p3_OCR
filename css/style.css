@@ -92,6 +92,14 @@ h2 {
   font-weight: 700;
 }
 
+.card a:hover {
+  color: black;
+}
+
+.card a:visited {
+  color: black;
+}
+
 /*Header et location*/
 .header {
   height: 113px;
@@ -126,6 +134,10 @@ main {
 
 /*Information*/
 .info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
 }
 .info__title {
@@ -142,6 +154,9 @@ main {
 }
 
 .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 217px;
   height: 50px;
   border-radius: 25px;
@@ -281,41 +296,65 @@ main {
   font-size: 17px;
   font-weight: 300;
 }
+.card__favorite {
+  position: relative;
+}
 .card__favorite i {
   position: absolute;
   right: 25px;
-  bottom: 15px;
+  top: -93px;
   font-size: 22px;
   color: #101010;
 }
-.card__favorite .fas {
+.card__favorite .favorite-liked {
   opacity: 0;
 }
-.card__favorite .fas:hover {
-  /*pour avoir la couleur sur le cœur au passage de la souris ou du stylet.*/
+.card__favorite .favorite-liked:hover {
   opacity: 1;
-  color: transparent; /*Cela me permet de rendre la couleur noire du cœur transparente.*/
-  background-clip: text; /*Grâce à cette propriété, j'ai pu limiter l'affichage du dégradé au texte, dans ce cas-ci juste pour remplir le cœur.*/
+  color: transparent;
+  background-clip: text;
   background-image: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
 }
 
 /*Permet de gérer la checkbox et le changement de couleur du cœur lorsque celle-ci est cochée.*/
-/* Permet de cacher la checkbox */
+/* Permet de cacher la checkbox et de la positionné*/
 .favorite-checkbox {
   display: none;
+  position: absolute;
+  top: -90px;
+  right: 29px;
 }
 
-/* Lorsque la checkbox est cochée, masque l'icône de cœur vide (far) et affiche l'icône de cœur plein (fas), avec le "+" je sélectionne l'élément adjacent */
-.favorite-checkbox:checked + label .far {
-  opacity: 0;
+.favorite {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 25px;
+  /* Lorsque la checkbox est cochée, masque l'icône de cœur vide (favorite-notLiked) et affiche l'icône de cœur plein (favorite-liked) */
 }
-
-/* Lorsque la checkbox est cochée, affiche l'icône de cœur plein avec une couleur dégradée en arrière-plan */
-.favorite-checkbox:checked + label .fas {
+.favorite input[type=checkbox]:checked ~ .favorite-liked {
+  display: inline-block;
   opacity: 1;
-  color: transparent; /* Rend la couleur de l'icône transparente */
-  background-clip: text; /* Applique le dégradé de couleur au texte */
-  background-image: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%); /* Dégradé de couleur utilisé comme arrière-plan */
+}
+.favorite input[type=checkbox]:checked ~ .favorite-notLiked {
+  display: none;
+}
+.favorite:hover .icons-liked {
+  opacity: 1;
+}
+
+.favorite-notLiked {
+  position: absolute;
+}
+
+.favorite-liked {
+  position: relative;
+  background: linear-gradient(160deg, #ff79da 0%, #9356dc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 300ms ease-in-out;
+  opacity: 0;
 }
 
 /*FOOTER*/
