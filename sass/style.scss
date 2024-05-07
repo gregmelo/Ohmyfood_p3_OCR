@@ -158,7 +158,10 @@ main {
   height: 251px;
   position: relative;
   overflow: hidden;
-
+  &:hover {
+    /*On augmente la taille de la carte du restaurant de 1 % lorsque la souris passe dessus.*/
+    transform: scale(1.01);
+  }
   &__image {
     img {
       display: flex;
