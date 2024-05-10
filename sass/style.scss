@@ -2,6 +2,57 @@
 @import "libs/variable.scss";
 @import "libs/mixins.scss";
 
+/*LOADER*/
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100vh;
+  width: fit-content;
+  font-weight: bold;
+  font-family: $font-family2;
+  font-size: 30px;
+  color: transparent;
+  background-color: rgba(255, 255, 255, 0.8);
+  background: linear-gradient(
+      90deg,
+      $primary-color 33.3%,
+      $secondary-color 0 66.6%,
+      $tertiary-color 0
+    )
+    0 0/300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: l10 5s infinite cubic-bezier(0.3, 1, 0, 1),
+    fadeOut 0.5s 5.5s forwards;
+}
+
+.loader:before {
+  content: "Loading...";
+}
+
+@keyframes l10 {
+  33.3% {
+    background-position: calc(1 * 100% / 2) 0;
+  }
+  66.6% {
+    background-position: calc(2 * 100% / 2) 0;
+  }
+  100% {
+    background-position: calc(3 * 100% / 2) 0;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+  }
+}
+
 body {
   font-family: $font-family, sans-serif;
   width: 100%;
@@ -12,6 +63,10 @@ h2 {
   font-weight: $font-weight-bold;
 }
 
+.card a {
+  color: black;
+}
+
 .card a:hover {
   color: black;
 }
@@ -19,6 +74,7 @@ h2 {
 .card a:visited {
   color: black;
 }
+
 /*Header et location*/
 .header {
   height: 113px;
@@ -265,7 +321,7 @@ main {
   input[type="checkbox"]:checked ~ .favorite-notLiked {
     display: none;
   }
-  &:hover .icons-liked {
+  &:hover .favorite-liked {
     opacity: 1;
   }
 }

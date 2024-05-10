@@ -241,12 +241,12 @@ main {
   font-weight: 300;
   font-size: 15px;
 }
-.category__card__toggle:checked ~ .category__card .category__card__title, .category__card__toggle:checked ~ .category__card .category__card__subtitle, .category__card:hover .category__card__title, .category__card:hover .category__card__subtitle {
+.category__card:hover .category__card__title, .category__card:hover .category__card__subtitle {
   display: block;
   overflow: hidden; /*Pour couper le texte qui dépasse.*/
   text-overflow: ellipsis; /*Pour afficher les "...".*/
   white-space: nowrap; /*Pour la gestion des espaces*/
-  max-width: 85%; /*Ajoutez une largeur maximale.*/
+  max-width: 230px; /*Ajoutez une largeur maximale.*/
 }
 .category__card__price {
   position: absolute;
@@ -278,14 +278,6 @@ main {
 }
 .category__card__toggle {
   display: none;
-}
-.category__card__toggle:checked ~ .category__card .category__card__price {
-  position: absolute;
-  right: 65px;
-}
-.category__card__toggle:checked ~ .category__card .category__card__check {
-  position: absolute;
-  right: 0;
 }
 .category__card:hover .category__card__price {
   position: absolute;

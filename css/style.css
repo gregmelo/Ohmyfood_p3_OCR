@@ -82,6 +82,47 @@ a {
   text-decoration: none;
 }
 
+/*LOADER*/
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100vh;
+  width: fit-content;
+  font-weight: bold;
+  font-family: "Shrikhand";
+  font-size: 30px;
+  color: transparent;
+  background-color: rgba(255, 255, 255, 0.8);
+  background: linear-gradient(90deg, #9356dc 33.3%, #ff79da 0 66.6%, #99e2d0 0) 0 0/300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: l10 5s infinite cubic-bezier(0.3, 1, 0, 1), fadeOut 0.5s 5.5s forwards;
+}
+
+.loader:before {
+  content: "Loading...";
+}
+
+@keyframes l10 {
+  33.3% {
+    background-position: 50% 0;
+  }
+  66.6% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 150% 0;
+  }
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   width: 100%;
@@ -90,6 +131,10 @@ body {
 h2 {
   font-size: 24px;
   font-weight: 700;
+}
+
+.card a {
+  color: black;
 }
 
 .card a:hover {
@@ -346,7 +391,7 @@ main {
 .favorite input[type=checkbox]:checked ~ .favorite-notLiked {
   display: none;
 }
-.favorite:hover .icons-liked {
+.favorite:hover .favorite-liked {
   opacity: 1;
 }
 

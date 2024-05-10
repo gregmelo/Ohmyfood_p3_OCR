@@ -163,15 +163,15 @@ main {
       font-size: $font-size-subtitle-menu;
     }
 
-    &__toggle:checked ~ & &__title,
-    &__toggle:checked ~ & &__subtitle,
+    // &__toggle:checked ~ & &__title,
+    // &__toggle:checked ~ & &__subtitle,
     &:hover &__title,
     &:hover &__subtitle {
       display: block;
       overflow: hidden; /*Pour couper le texte qui dépasse.*/
       text-overflow: ellipsis; /*Pour afficher les "...".*/
       white-space: nowrap; /*Pour la gestion des espaces*/
-      max-width: 85%; /*Ajoutez une largeur maximale.*/
+      max-width: 230px; /*Ajoutez une largeur maximale.*/
     }
     &__price {
       position: absolute;
@@ -203,14 +203,14 @@ main {
       display: none;
     }
     /* Lorsque la checkbox est cochée, le prix ce décale sur la gauche et le check apparait, avec le "~" je sélectionne tous les éléments .category__card qui suivent l’élément .category__card__toggle, pas seulement le premier.*/
-    &__toggle:checked ~ & &__price {
-      position: absolute;
-      right: 65px;
-    }
-    &__toggle:checked ~ & &__check {
-      position: absolute;
-      right: 0;
-    }
+    // &__toggle:checked ~ & &__price {
+    //   position: absolute;
+    //   right: 65px;
+    // }
+    // &__toggle:checked ~ & &__check {
+    //   position: absolute;
+    //   right: 0;
+    // }
 
     &:hover &__price {
       position: absolute;
