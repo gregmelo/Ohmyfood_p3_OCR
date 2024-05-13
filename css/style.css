@@ -95,10 +95,12 @@ a {
   font-size: 30px;
   color: transparent;
   background-color: rgba(255, 255, 255, 0.8);
-  background: linear-gradient(90deg, #9356dc 33.3%, #ff79da 0 66.6%, #99e2d0 0) 0 0/300% 100%;
+  background: linear-gradient(90deg, #9356dc 33.3%, #ff79da 0 66.6%, #99e2d0 0)
+    0 0/300% 100%;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: l10 5s infinite cubic-bezier(0.3, 1, 0, 1), fadeOut 0.5s 5.5s forwards;
+  animation: l10 5s infinite cubic-bezier(0.3, 1, 0, 1),
+    fadeOut 0.5s 5.5s forwards;
 }
 
 .loader:before {
@@ -365,7 +367,11 @@ main {
   opacity: 1;
   color: transparent;
   background-clip: text;
-  background-image: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  background-image: linear-gradient(
+    193.33deg,
+    #9356dc -11.44%,
+    #ff79da 123.93%
+  );
 }
 
 /*Permet de gérer la checkbox et le changement de couleur du cœur lorsque celle-ci est cochée.*/
@@ -382,13 +388,18 @@ main {
   justify-content: flex-end;
   align-items: center;
   font-size: 25px;
-  /* Lorsque la checkbox est cochée, masque l'icône de cœur vide (favorite-notLiked) et affiche l'icône de cœur plein (favorite-liked) */
 }
-.favorite input[type=checkbox]:checked ~ .favorite-liked {
+/* Lorsque la checkbox est cochée, masque l'icône de cœur vide (favorite-notLiked) et affiche l'icône de cœur plein (favorite-liked) */
+@media (hover: hover) {
+  .favorite:hover .favorite-liked {
+    opacity: 1;
+  }
+}
+.favorite input[type="checkbox"]:checked ~ .favorite-liked {
   display: inline-block;
   opacity: 1;
 }
-.favorite input[type=checkbox]:checked ~ .favorite-notLiked {
+.favorite input[type="checkbox"]:checked ~ .favorite-notLiked {
   display: none;
 }
 .favorite:hover .favorite-liked {
@@ -497,11 +508,11 @@ footer ul li a {
     flex-direction: row;
   }
   /*On cible les deux premiers éléments li.*/
-  footer ul li:nth-child(-n+2) {
+  footer ul li:nth-child(-n + 2) {
     width: 190px;
   }
   /*On cible les deux derniers éléments li.*/
-  footer ul li:nth-child(n+3) {
+  footer ul li:nth-child(n + 3) {
     width: 130px;
   }
 }
