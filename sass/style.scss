@@ -281,21 +281,6 @@ main {
       font-size: 22px;
       color: #101010;
     }
-
-    .favorite-liked {
-      opacity: 0;
-
-      &:hover {
-        opacity: 1;
-        color: transparent;
-        background-clip: text;
-        background-image: linear-gradient(
-          193.33deg,
-          #9356dc -11.44%,
-          #ff79da 123.93%
-        );
-      }
-    }
   }
 }
 
