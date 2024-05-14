@@ -63,14 +63,8 @@ h2 {
   font-weight: $font-weight-bold;
 }
 
-.card a {
-  color: black;
-}
-
-.card a:hover {
-  color: black;
-}
-
+.card a,
+.card a:hover,
 .card a:visited {
   color: black;
 }
@@ -374,11 +368,33 @@ footer {
   }
 }
 
+@media (min-width: 820px) {
+  /*Passage de la section restaurants sur deux colonnes et deux lignes + modification de l'espacement entre les cards.*/
+  .restaurants {
+    padding: 30px auto;
+    &__cards {
+      grid-template: 1fr 1fr / 1fr 1fr; /* Avant le "/", cela correspond à "grid-template-rows" donc 2 lignes, et après le "/", cela correspond à "grid-template-columns" donc 2 colonnes.*/
+      gap: 50px 50px; /*La première valeur correspond au gap vertical et la seconde au gap horizontal.*/
+    }
+  }
+  .card {
+    min-width: 290px;
+  }
+}
+
 @media (min-width: 1024px) {
   /*Augmentation de la taille du titre de la section info.*/
   .info {
     &__title {
       font-size: 40px;
+    }
+  }
+  /*Passage de la section restaurants sur deux colonnes et deux lignes + modification de l'espacement entre les cards.*/
+  .restaurants {
+    padding: 30px 180px;
+    &__cards {
+      grid-template: 1fr 1fr / 1fr 1fr; /* Avant le "/", cela correspond à "grid-template-rows" donc 2 lignes, et après le "/", cela correspond à "grid-template-columns" donc 2 colonnes.*/
+      gap: 50px 100px; /*La première valeur correspond au gap vertical et la seconde au gap horizontal.*/
     }
   }
 
@@ -394,15 +410,6 @@ footer {
     }
     &__steps {
       gap: 50px;
-    }
-  }
-
-  /*Passage de la section restaurants sur deux colonnes et deux lignes + modification de l'espacement entre les cards.*/
-  .restaurants {
-    padding: 30px 180px;
-    &__cards {
-      grid-template: 1fr 1fr / 1fr 1fr; /* Avant le "/", cela correspond à "grid-template-rows" donc 2 lignes, et après le "/", cela correspond à "grid-template-columns" donc 2 colonnes.*/
-      gap: 50px 100px; /*La première valeur correspond au gap vertical et la seconde au gap horizontal.*/
     }
   }
 
