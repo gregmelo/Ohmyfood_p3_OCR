@@ -15,7 +15,7 @@ Vous pouvez consulter le [brief complet ici](https://course.oc-static.com/projec
 
 ## Objectifs<a id="objectifs"></a>
 
-L'objectif est d'intégrer puis d'animer une page web avec des animations CSS en utilisant le préprocesseur Sass.
+L'objectif est d'intégrer puis d'animer une page web avec des animations CSS en utilisant le préprocesseur Sass. Adoption du Mobile First pour l'intégration du site.
 
 1. Développer un site présentant le menu de quatre grands restaurants parisiens.
 2. Permettre la réservation en ligne et la composition de menus.
