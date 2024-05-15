@@ -24,8 +24,8 @@ L'objectif est d'intégrer puis d'animer une page web avec des animations CSS en
 
 Polices :
 
-- Logo et titres : Shrikhand
-- Texte : Roboto
+    - Logo et titres : Shrikhand
+    - Texte : Roboto
 
 Couleurs :
 
