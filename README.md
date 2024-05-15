@@ -20,7 +20,7 @@ L'objectif est d'intégrer puis d'animer une page web avec des animations CSS en
 1. Développer un site présentant le menu de quatre grands restaurants parisiens.
 2. Permettre la réservation en ligne et la composition de menus.
 
-## Identité graphique
+## Identité_graphique
 
 Polices :
 
