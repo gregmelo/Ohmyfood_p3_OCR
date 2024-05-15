@@ -9,7 +9,7 @@ Vous pouvez consulter le [brief complet ici](https://course.oc-static.com/projec
 ## Table des matières
 
 - [Objectifs](#objectifs)
-- [Identité graphique](#identite)
+- [Identité graphique](#identite-graphique)
 - [Technologies](#technologies)
 - [Liens](#liens)
 
@@ -20,7 +20,7 @@ L'objectif est d'intégrer puis d'animer une page web avec des animations CSS en
 1. Développer un site présentant le menu de quatre grands restaurants parisiens.
 2. Permettre la réservation en ligne et la composition de menus.
 
-## Identité_graphique
+## Identité graphique
 
 Polices :
 
