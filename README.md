@@ -13,7 +13,7 @@ Vous pouvez consulter le [brief complet ici](https://course.oc-static.com/projec
 - [Technologies](#technologies)
 - [Liens](#liens)
 
-## Objectifs
+## Objectifs<a id="objectifs"></a>
 
 L'objectif est d'intégrer puis d'animer une page web avec des animations CSS en utilisant le préprocesseur Sass.
 
@@ -33,7 +33,7 @@ Couleurs :
     - Secondaire : #FF79DA
     - Tertiaire : #99E2D0
 
-## Technologies
+## Technologies<a id="technologies"></a>
 
 Autorisées : HTML / CSS / Sass
 
@@ -41,7 +41,7 @@ Recommandée : HTML / Sass
 
 Interdite : JavaScript
 
-## Liens
+## Liens<a id="liens"></a>
 
 - [Maquettes mobile et desktop du site Ohmyfood](<https://www.figma.com/design/t4449fzDnwGYmzuwQdu87V/Maquettes-Ohmyfood-(mobile-et-desktop)?node-id=25368-697&t=6X5zRyKw8yVRBuYX-0>)
 - [Prototype du site](<https://www.figma.com/proto/t4449fzDnwGYmzuwQdu87V/Maquettes-Ohmyfood-(mobile-et-desktop)?node-id=25368-591&scaling=scale-down&page-id=0%3A1&starting-point-node-id=25368%3A591&show-proto-sidebar=1>)
