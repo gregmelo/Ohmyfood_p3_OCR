@@ -9,7 +9,7 @@ Vous pouvez consulter le [brief complet ici](https://course.oc-static.com/projec
 ## Table des matières
 
 - [Objectifs](#objectifs)
-- [Identité graphique](#identite-graphique)
+- [Identité graphique](#identite)
 - [Technologies](#technologies)
 - [Liens](#liens)
 
