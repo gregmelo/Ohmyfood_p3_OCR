@@ -25,7 +25,7 @@
     0 0/300% 100%;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: l10 5s infinite cubic-bezier(0.3, 1, 0, 1),
+  animation: loading 5s infinite cubic-bezier(0.3, 1, 0, 1),
     fadeOut 0.5s 5.5s forwards;
 }
 
@@ -33,7 +33,7 @@
   content: "Loading...";
 }
 
-@keyframes l10 {
+@keyframes loading {
   33.3% {
     background-position: calc(1 * 100% / 2) 0;
   }

@@ -98,14 +98,14 @@ a {
   background: linear-gradient(90deg, #9356dc 33.3%, #ff79da 0 66.6%, #99e2d0 0) 0 0/300% 100%;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: l10 5s infinite cubic-bezier(0.3, 1, 0, 1), fadeOut 0.5s 5.5s forwards;
+  animation: loading 5s infinite cubic-bezier(0.3, 1, 0, 1), fadeOut 0.5s 5.5s forwards;
 }
 
 .loader:before {
   content: "Loading...";
 }
 
-@keyframes l10 {
+@keyframes loading {
   33.3% {
     background-position: 50% 0;
   }
